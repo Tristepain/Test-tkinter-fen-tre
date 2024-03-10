@@ -1,0 +1,35 @@
+import tkinter as tk
+from tkinter import messagebox
+
+def msg():
+	messagebox.showinfo("WayToLearnX", "Welcome to WayToLearnX!")
+
+window = tk.Tk()
+window.title("Hello world")
+window.geometry("800x600")
+
+r = tk.IntVar()
+r.set("2")
+
+hello = tk.Label(text="Hello world!")
+hello.pack()
+
+button1 = tk.Button(window,text="Click me!",command = msg)
+button1.pack()
+
+select_button =tk.Checkbutton(window)
+select_button.pack()
+
+Bouton_radio= tk.Radiobutton(window,text="Bouton radio",variable = r,value = 1)
+Bouton_radio.pack()
+
+Bouton_radio2= tk.Radiobutton(window,text="Bouton radio2",variable = r,value = 2)
+Bouton_radio2.pack()
+
+myLabel = tk.Label(window, text = r.get())
+myLabel.pack()
+
+text_entry = tk.Entry(window,width=50)
+text_area = tk.Text(window,width=50,height=50)
+text_area.pack()
+tk.mainloop()
